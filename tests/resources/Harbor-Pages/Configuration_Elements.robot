@@ -73,5 +73,5 @@ ${banner_message_closable_checkbox}  //div[contains(@class,'clr-checkbox-wrapper
 ${banner_message_from_date}  (//clr-date-container)[1]//button
 ${banner_message_to_date}  (//clr-date-container)[2]//button
 ${banner_message_date_next_month}  //button[@aria-label='Next month']
-${banner_message_close_alert}  //clr-alert//button[@aria-label='Close']
+${banner_message_close_alert}  //clr-alert//button[@aria-label='Close alert']
 ${banner_message_alert}  //app-app-level-alerts//span[contains(@class,'banner-message')]
