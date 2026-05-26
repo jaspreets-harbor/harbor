@@ -17,7 +17,7 @@ Documentation  This resource provides any keywords related to the Harbor private
 
 *** Keywords ***
 Switch To Log Rotation
-    Retry Element Click  //clr-main-container//clr-vertical-nav-group//span[contains(.,'Clean Up')]
+    Retry Element Click  //clr-main-container//clr-vertical-nav//a[@href='/harbor/clearing-job']
     Retry Element Click  ${log_rotation_page_xpath}
 
 Purge Now

@@ -24,7 +24,7 @@ ${config_auth_save_button_xpath}  //*[@id='config_auth_save']
 ${config_system_save_button_xpath}  //*[@id='config_system_save']
 ${config_security_save_button_xpath}  //*[@id='security_save']
 ${vulnerbility_save_button_xpath}  //*[@id='config-save']
-${configuration_xpath}  //clr-main-container//clr-vertical-nav//a[contains(.,' Configuration ')]
+${configuration_xpath}  //clr-main-container//clr-vertical-nav//a[@href='/harbor/configs']
 ${configuration_system_tabsheet_id}  //*[@id='config-system']
 ${configuration_security_tabsheet_id}  //*[@id='config-security']
 ${configuration_authentication_tabsheet_id}  //*[@id="config-auth"]
@@ -73,5 +73,5 @@ ${banner_message_closable_checkbox}  //div[contains(@class,'clr-checkbox-wrapper
 ${banner_message_from_date}  (//clr-date-container)[1]//button
 ${banner_message_to_date}  (//clr-date-container)[2]//button
 ${banner_message_date_next_month}  //button[@aria-label='Next month']
-${banner_message_close_alert}  //clr-alert//button[@aria-label='Close alert']
-${banner_message_alert}  //app-app-level-alerts
+${banner_message_close_alert}  //clr-alert//button[@aria-label='Close']
+${banner_message_alert}  //app-app-level-alerts//span[contains(@class,'banner-message')]

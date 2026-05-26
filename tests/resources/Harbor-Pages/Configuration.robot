@@ -144,15 +144,15 @@ Switch To Project Quotas
     Sleep  1
     Retry Element Click  xpath=${configuration_xpath}
     Sleep  1
-    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[contains(.,'Project Quotas')]
+    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[@href='/harbor/project-quotas']
     Sleep  1
 
 Switch To Distribution
-    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav-group//span[contains(.,'Distributions')]
+    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[@href='/harbor/distribution/instances']
 
 Switch To Robot Account
     Sleep  1
-    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav-group//span[contains(.,'Robot Accounts')]
+    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[@href='/harbor/robot-accounts']
     Sleep  1
 
 Modify Token Expiration
@@ -214,7 +214,7 @@ Disable Read Only
 ## System labels
 Switch To System Labels
     Sleep  1
-    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[contains(.,'Labels')]
+    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[@href='/harbor/labels']
 
 Switch To Configuration System Setting
     Sleep  1
@@ -227,7 +227,7 @@ Switch To Configuration Security
 
 Switch To Configuration Project Quotas
     Sleep  1
-    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[contains(.,'Project Quotas')]
+    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[@href='/harbor/project-quotas']
 
 Create New Labels
     [Arguments]  ${labelname}

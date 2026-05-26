@@ -16,7 +16,7 @@
 Documentation  This resource provides any keywords related to the Harbor private registry appliance
 
 *** Variables ***
-${administration_user_tag_xpath}  //clr-vertical-nav-group-children/a[contains(.,'Users')]
+${administration_user_tag_xpath}  //clr-vertical-nav//a[@href='/harbor/users']
 ${administration_tag_xpath}  //clr-vertical-nav-group[contains(.,'Admin')]
 ${add_new_user_button}    //*[@id='add-new-user']
 ${save_new_user_button}   //*[@id='save-button']

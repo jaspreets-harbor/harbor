@@ -16,5 +16,5 @@
 Documentation  This resource provides any keywords related to the Harbor private registry appliance
 
 *** Variables ***
-${administration_project_quotas_tag_xpath}  //clr-vertical-nav-group-children/a[contains(.,'Project Quotas')]
+${administration_project_quotas_tag_xpath}  //clr-vertical-nav//a[@href='/harbor/project-quotas']
 ${sort_used_storage_button}  //div[@class='datagrid-table']//div[@class='datagrid-header']//button[normalize-space()='Storage']

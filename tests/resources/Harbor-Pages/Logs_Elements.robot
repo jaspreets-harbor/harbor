@@ -16,5 +16,5 @@
 Documentation  This resource provides any keywords related to the Harbor private registry appliance
 
 *** Variables ***
-${logs_xpath}  //clr-main-container//clr-vertical-nav//a[contains(.,'Logs')]
+${logs_xpath}  //clr-main-container//clr-vertical-nav//a[@href='/harbor/logs']
 ${logs_refresh_btn}  //hbr-audit-log//span[contains(@class,'refresh-btn')]

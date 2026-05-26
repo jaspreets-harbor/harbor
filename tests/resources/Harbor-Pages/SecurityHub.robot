@@ -20,7 +20,7 @@ Resource  ../../resources/Util.robot
 
 *** Keywords ***
 Switch To Security Hub
-    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[contains(.,'Interrogation')]
+    Retry Element Click  xpath=//clr-main-container//clr-vertical-nav//a[@href='/harbor/interrogation-services']
     Retry Element Click  xpath=//app-interrogation-services//a[contains(.,'Security Hub')]
     Retry Wait Element  ${security_hub_search_btn}
 

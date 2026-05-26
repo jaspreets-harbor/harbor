@@ -16,7 +16,7 @@
 Documentation  This resource provides any keywords related to the Harbor private registry appliance
 
 *** Variables ***
-${sign_up_for_an_account_xpath}  /html/body/harbor-app/sign-in/clr-main-container/div/form/div[1]/a
+${sign_up_for_an_account_xpath}  //a[@class='signup']
 ${sign_up_button_xpath}  //a[@class='signup']
 ${username_xpath}  //*[@id='username']
 ${email_xpath}  //*[@id='email']
@@ -30,7 +30,7 @@ ${login_btn}  //*[@id='log_in']
 ${harbor_span_title}  //span[contains(., 'Harbor')]
 ${login_name}  //*[@id='login_username']
 ${login_pwd}  //*[@id='login_password']
-${header_user}  //clr-dropdown//button[@class='nav-text dropdown-toggle']//span
+${header_user}  //clr-dropdown//button[contains(@class,'nav-text')]//span
 ${about_btn}  //clr-dropdown-menu/a[contains(.,'About')]
 ${header}  xpath=//clr-header[contains(@class,'header-5')]
 ${color_theme_light}  //span[contains(.,'LIGHT')]

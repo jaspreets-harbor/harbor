@@ -17,14 +17,14 @@ Documentation  This resource provides any keywords related to the Harbor private
 
 *** Keywords ***
 Switch To Job Queues
-    Retry Double Keywords When Error  Retry Element Click  //clr-main-container//clr-vertical-nav-group//span[contains(.,'Job Service Dashboard')]  Retry Wait Until Page Contains Element  ${job_service_stop_btn}
+    Retry Double Keywords When Error  Retry Element Click  //clr-main-container//clr-vertical-nav//a[@href='/harbor/job-service-dashboard']  Retry Wait Until Page Contains Element  ${job_service_stop_btn}
 
 Switch To Job Schedules
-    Retry Element Click  //clr-main-container//clr-vertical-nav-group//span[contains(.,'Job Service Dashboard')]
+    Retry Element Click  //clr-main-container//clr-vertical-nav//a[@href='/harbor/job-service-dashboard']
     Retry Double Keywords When Error  Retry Button Click  ${job_service_schedules_btn}  Retry Wait Until Page Contains  Vendor Type
 
 Switch To Job Workers
-    Retry Element Click  //clr-main-container//clr-vertical-nav-group//span[contains(.,'Job Service Dashboard')]
+    Retry Element Click  //clr-main-container//clr-vertical-nav//a[@href='/harbor/job-service-dashboard']
     Retry Double Keywords When Error  Retry Button Click  ${job_service_workers_btn}  Retry Wait Until Page Contains  Worker Pools
 
 Select Jobs
