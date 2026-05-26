@@ -36,7 +36,7 @@ Select Event Type
 Update A Webhook
     [Arguments]  ${old_webhook_name}  ${new_webhook_name}  ${new_webhook_enpoint}  ${payload_format}=Default
     # select one webhook
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${old_webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${old_webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     Retry Element Click  ${action_webhook_xpath}
     Retry Element Click  ${action_webhook_edit_button}
 
@@ -53,7 +53,7 @@ Update A Webhook
 
 Enable/Deactivate State of Same Webhook
     [Arguments]  ${webhook_name}
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     Retry Element Click   ${action_webhook_xpath}
     Retry Element Click   ${action_webhook_disable_or_enable_button}
     Retry Wait Until Page Contains Element  ${dialog_disable_id_xpath}
@@ -61,7 +61,7 @@ Enable/Deactivate State of Same Webhook
     # contain deactivated webhook
     Retry Wait Until Page Contains Element   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//span[contains(.,'Deactivated')]
 
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     Retry Element Click   ${action_webhook_xpath}
     Retry Element Click   ${action_webhook_disable_or_enable_button}
     Retry Wait Until Page Contains Element  ${dialog_enable_id_xpath}
@@ -71,9 +71,9 @@ Enable/Deactivate State of Same Webhook
 
 Delete A Webhook
     [Arguments]  ${webhook_name}
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     Retry Element Click   ${action_webhook_xpath}
     Retry Element Click   ${action_webhook_delete_button}
     Retry Wait Until Page Contains Element  ${dialog_delete_button}
     Retry Element Click  ${dialog_delete_button}
-    Retry Wait Until Page Not Contains Element   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Wait Until Page Not Contains Element   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]

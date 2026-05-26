@@ -30,7 +30,7 @@ ${OIDC_USERNAME}  test1
 ${generate_secret_btn}       //*[@id='generate-cli-btn']
 ${more_btn}       //*[@id='hidden-generate-cli']
 ${reset_secret_btn}       //*[@id='reset-cli-btn']
-${user_test7_checkbox}         //clr-dg-row[contains(.,'test7')]//div[contains(@class,'clr-checkbox-wrapper')]//label[contains(@class,'clr-control-label')]
+${user_test7_checkbox}         //clr-dg-row[contains(.,'test7')]//clr-checkbox-wrapper//label[contains(@class,'clr-control-label')]
 ${member_action_btn}   //*[@id='member-action']
 ${user_actions_del_btn}          //*[@id='deleteUser']
 ${user_test7_row}      //clr-dg-row[contains(.,'test7')]

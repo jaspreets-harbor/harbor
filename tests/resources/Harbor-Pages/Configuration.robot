@@ -245,7 +245,7 @@ Create New Labels
 
 Update A Label
     [Arguments]  ${labelname}
-    Retry Element Click  xpath=//clr-dg-row[contains(.,'${labelname}')]//div[contains(@class,'clr-checkbox-wrapper')]//label[contains(@class,'clr-control-label')]
+    Retry Element Click  xpath=//clr-dg-row[contains(.,'${labelname}')]//clr-checkbox-wrapper//label[contains(@class,'clr-control-label')]
     Sleep  1
     Retry Element Click  xpath=//button[contains(.,'Edit')]
     Sleep  1
@@ -256,7 +256,7 @@ Update A Label
 
 Delete A Label
     [Arguments]  ${labelname}
-    Retry Element Click  xpath=//clr-dg-row[contains(.,'${labelname}')]//div[contains(@class,'clr-checkbox-wrapper')]//label[contains(@class,'clr-control-label')]
+    Retry Element Click  xpath=//clr-dg-row[contains(.,'${labelname}')]//clr-checkbox-wrapper//label[contains(@class,'clr-control-label')]
     Sleep  1
     Retry Element Click  xpath=//button[contains(.,'Delete')]
     Sleep  3
@@ -312,7 +312,7 @@ Set User Name Claim And Save
 
 Select Distribution
     [Arguments]    ${name}
-    Retry Element Click    //clr-dg-row[contains(.,'${name}')]//div[contains(@class,'clr-checkbox-wrapper')]/label[contains(@class,'clr-control-label')]
+    Retry Element Click    //clr-dg-row[contains(.,'${name}')]//clr-checkbox-wrapper/label[contains(@class,'clr-control-label')]
 
 Distribution Exist
     [Arguments]  ${name}  ${endpoint}

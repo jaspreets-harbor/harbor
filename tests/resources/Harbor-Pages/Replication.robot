@@ -244,7 +244,7 @@ Rename Endpoint
 Delete Endpoint
     [Arguments]  ${name}
     Filter Registry  ${name}
-    Retry Double Keywords When Error  Retry Element Click  //clr-dg-row[contains(.,'${name}')]//div[contains(@class,'clr-checkbox-wrapper')]  Checkbox Should Be Selected  //clr-dg-row[contains(.,'${name}')]//input
+    Retry Double Keywords When Error  Retry Element Click  //clr-dg-row[contains(.,'${name}')]//clr-checkbox-wrapper  Checkbox Should Be Selected  //clr-dg-row[contains(.,'${name}')]//input
     Retry Element Click  ${registry_del_btn}
     Wait Until Page Contains Element  ${dialog_delete}
     Retry Element Click  ${dialog_delete}

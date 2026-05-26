@@ -30,7 +30,7 @@ Switch To Job Workers
 Select Jobs
     [Arguments]  @{job_types}
     FOR  ${job_type}  IN  @{job_types}
-        Retry Double Keywords When Error  Retry Element Click  //clr-datagrid//clr-dg-row[contains(.,'${job_type}')]//div[contains(@class,'clr-checkbox-wrapper')]  Retry Checkbox Should Be Selected  //clr-datagrid//clr-dg-row[contains(.,'${job_type}')]//input
+        Retry Double Keywords When Error  Retry Element Click  //clr-datagrid//clr-dg-row[contains(.,'${job_type}')]//clr-checkbox-wrapper  Retry Checkbox Should Be Selected  //clr-datagrid//clr-dg-row[contains(.,'${job_type}')]//input
     END
 
 Stop Pending Jobs

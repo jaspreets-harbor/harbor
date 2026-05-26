@@ -48,7 +48,7 @@ ${repo_search_input}  xpath=//hbr-filter//input
 ${repo_list_spinner}  xpath=//clr-datagrid//clr-spinner
 #${repo_search_icon}  xpath=//hbr-repository-gridview//clr-datagrid//clr-dg-column[contains(.,'Name')]//clr-dg-string-filter//button//clr-icon
 #${repo_search_input}  xpath=//div[@class[contains(.,'datagrid-filter')]]//input
-${repo_tag_1st_checkbox}  xpath=//clr-datagrid//clr-dg-row//div[contains(@class,'clr-checkbox-wrapper')]
+${repo_tag_1st_checkbox}  xpath=//clr-datagrid//clr-dg-row//clr-checkbox-wrapper
 ${tag_table_column_pull_command}  xpath=//clr-dg-column//span[contains(.,'Pull Command')]
 ${tag_table_column_vulnerabilities}  xpath=//clr-dg-column//span[contains(.,'Vulnerabilities')]
 ${tag_table_column_os_arch}  xpath=//clr-dg-column//span[contains(.,'OS/ARCH')]
@@ -63,7 +63,7 @@ ${project_config_content_trust_checkbox}  xpath=//input[@name='content-trust']
 ${project_config_scan_images_on_push_checkbox}  xpath=//input[@name='scan-image-on-push']
 ${project_config_prevent_vulnerable_images_from_running_checkbox}  xpath=//input[@name='prevent-vulenrability-image-input']
 ${project_config_severity_select}  xpath=//select[@id='severity']
-${project_config_public_checkbox_label}  xpath=//*[@id="clr-wrapper-public"]/div/clr-checkbox-wrapper/label[contains(@class,'clr-control-label')]
+${project_config_public_checkbox_label}  xpath=//clr-checkbox-wrapper//label[contains(@class,'clr-control-label') and contains(.,'Public')]
 ${project_config_prevent_vulenrability_checkbox_label}    xpath=//*[@id='prevent-vulenrability-image']//clr-checkbox-wrapper//label[contains(@class,'clr-control-label')]
 ${project_config_system_wl_radio_input}    xpath=//clr-radio-wrapper//label[contains(@class,'clr-control-label') and contains(.,'System allowlist')]
 ${project_config_project_wl_radio_input}    xpath=//clr-radio-wrapper//label[contains(@class,'clr-control-label') and contains(.,'Project allowlist')]

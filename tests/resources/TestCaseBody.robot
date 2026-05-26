@@ -469,7 +469,7 @@ Verify Webhook By Artifact Pushed Event
     Delete All Requests
     Push Image With Tag  ${ip}  ${user}  ${pwd}  ${project_name}  ${image}  ${tag}
     Switch Window  ${harbor_handle}
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     ${webhook_execution_id}=  Get Latest Webhook Execution ID
     Retry Action Keyword  Verify Webhook Execution  ${webhook_execution_id}  WEBHOOK  Success  Artifact pushed  ${artifact_pushed_property}
     Verify Webhook Execution Log  ${webhook_execution_id}
@@ -491,7 +491,7 @@ Verify Webhook By Artifact Pulled Event
     Switch Window  ${harbor_handle}
     Go Into Project  ${project_name}
     Switch To Project Webhooks
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     ${webhook_execution_id}=  Get Latest Webhook Execution ID
     Retry Action Keyword  Verify Webhook Execution  ${webhook_execution_id}  WEBHOOK  Success  Artifact pulled  ${artifact_pulled_property}
     Verify Webhook Execution Log  ${webhook_execution_id}
@@ -511,7 +511,7 @@ Verify Webhook By Artifact Deleted Event
     Multi-delete Artifact  @{tag_list}
     Go Into Project  ${project_name}
     Switch To Project Webhooks
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     ${webhook_execution_id}=  Get Latest Webhook Execution ID
     Retry Action Keyword  Verify Webhook Execution  ${webhook_execution_id}  WEBHOOK  Success  Artifact deleted  ${artifact_deleted_property}
     Verify Webhook Execution Log  ${webhook_execution_id}
@@ -530,7 +530,7 @@ Verify Webhook By Scanning Finished Event
     Scan Repo  ${tag}  Succeed
     Go Into Project  ${project_name}
     Switch To Project Webhooks
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     ${webhook_execution_id}=  Get Latest Webhook Execution ID
     Retry Action Keyword  Verify Webhook Execution  ${webhook_execution_id}  WEBHOOK  Success  Scanning finished  ${scanning_finished_property}
     Verify Webhook Execution Log  ${webhook_execution_id}
@@ -550,7 +550,7 @@ Verify Webhook By Scanning Stopped Event
     Check Scan Artifact Job Status Is Stopped
     Go Into Project  ${project_name}
     Switch To Project Webhooks
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     ${webhook_execution_id}=  Get Latest Webhook Execution ID
     Retry Action Keyword  Verify Webhook Execution  ${webhook_execution_id}  WEBHOOK  Success  Scanning stopped  ${scanning_stopped_property}
     Verify Webhook Execution Log  ${webhook_execution_id}
@@ -572,7 +572,7 @@ Verify Webhook By Tag Retention Finished Event
     Execute Run  ${image}
     Go Into Project  ${project_name}
     Switch To Project Webhooks
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     ${webhook_execution_id}=  Get Latest Webhook Execution ID
     Retry Action Keyword  Verify Webhook Execution  ${webhook_execution_id}  WEBHOOK  Success  Tag retention finished  ${tag_retention_finished_property}
     Verify Webhook Execution Log  ${webhook_execution_id}
@@ -595,7 +595,7 @@ Verify Webhook By Replication Status Changed Event
     Check Latest Replication Job Status  Succeeded
     Go Into Project  ${project_name}
     Switch To Project Webhooks
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     ${webhook_execution_id}=  Get Latest Webhook Execution ID
     Retry Action Keyword  Verify Webhook Execution  ${webhook_execution_id}  WEBHOOK  Success  Replication status changed  ${replication_finished_property}
     Verify Webhook Execution Log  ${webhook_execution_id}
@@ -621,7 +621,7 @@ Verify Webhook By Quota Near Threshold Event And Quota Exceed Event
     # Quota near threshold
     Push Image With Tag  ${ip}  ${HARBOR_ADMIN}  ${HARBOR_PASSWORD}  project${d}  ${image}  ${tag1}  ${tag1}
     Switch Window  ${harbor_handle}
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'webhook${d}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'webhook${d}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     ${webhook_execution_id}=  Get Latest Webhook Execution ID
     Retry Action Keyword  Verify Webhook Execution  ${webhook_execution_id}  WEBHOOK  Success  Quota near threshold  ${quota_near_threshold_property}
     Verify Webhook Execution Log  ${webhook_execution_id}
@@ -647,7 +647,7 @@ Verify Webhook By Quota Exceed Event
     Switch Window  ${harbor_handle}
     Go Into Project  ${project_name}
     Switch To Project Webhooks
-    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//div[contains(@class,'datagrid-select')]
+    Retry Element Click   xpath=//clr-dg-row[contains(.,'${webhook_name}')]//clr-dg-cell[contains(@class,'datagrid-select')]
     ${webhook_execution_id}=  Get Latest Webhook Execution ID
     Retry Action Keyword  Verify Webhook Execution  ${webhook_execution_id}  WEBHOOK  Success  Quota exceed  ${quota_exceed_property}
     Verify Webhook Execution Log  ${webhook_execution_id}
